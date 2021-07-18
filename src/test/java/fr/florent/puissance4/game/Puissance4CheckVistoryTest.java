@@ -25,9 +25,9 @@ public class Puissance4CheckVistoryTest {
 
 
     @Test
-    public void testVictoryRight1() {
+    public void testVictory1() {
 
-        System.out.println("testVictoryRight1");
+        System.out.println("testVictory1");
 
         EnumCell[] board = {
                 EnumCell.CROSS, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
@@ -48,8 +48,8 @@ public class Puissance4CheckVistoryTest {
     }
 
     @Test
-    public void testVictoryRight2() {
-        System.out.println("testVictoryRight2");
+    public void testVictory2() {
+        System.out.println("testVictory2");
         EnumCell[] board = {
                 EnumCell.CROSS, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
                 EnumCell.CROSS, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
@@ -68,8 +68,8 @@ public class Puissance4CheckVistoryTest {
         Assert.assertEquals(EnumPlayer.getByEnumCell(EnumCell.CROSS), puissance4.checkVictory(6));
     }
     @Test
-    public void testVictoryRight3() {
-        System.out.println("testVictoryRight3");
+    public void testVictory3() {
+        System.out.println("testVictory3");
         EnumCell[] board = {
                 EnumCell.CROSS, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
                 EnumCell.EMPTY, EnumCell.CROSS, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
@@ -87,6 +87,28 @@ public class Puissance4CheckVistoryTest {
 
         Assert.assertEquals(EnumPlayer.getByEnumCell(EnumCell.CROSS), puissance4.checkVictory(21));
     }
+
+    @Test
+    public void testVictory4() {
+        System.out.println("testVictory4");
+        EnumCell[] board = {
+                EnumCell.CROSS, EnumCell.CROSS, EnumCell.CROSS, EnumCell.CROSS, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+                EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY, EnumCell.EMPTY,
+        };
+
+
+        Puissance4 puissance4 = new Puissance4(board);
+        printBoard(board);
+
+        Assert.assertEquals(EnumPlayer.getByEnumCell(EnumCell.CROSS), puissance4.checkVictory(3));
+    }
+
     @Test
     public void testNothing() {
         System.out.println("testNothing");
